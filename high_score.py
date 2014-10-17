@@ -1,14 +1,18 @@
 __author__ = 'risinsun'
 
-highest_score = 0
 result_file = open("result.txt")
+scores = []
 
 for line in result_file:
     (name, score) = line.split(" ")
-    if float(score) > highest_score:
-        highest_score = float(score)
+    scores.append(float(score))
 
+scores.sort(reverse=True)
 result_file.close()
 
 print("The highest score is: ")
-print(highest_score)
+print(scores[0])
+print("The second score is: ")
+print(scores[1])
+print("The third score is: ")
+print(scores[2])
