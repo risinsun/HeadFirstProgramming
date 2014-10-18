@@ -1,18 +1,13 @@
 __author__ = 'risinsun'
 
 result_file = open("result.txt")
-scores = []
+scores = {}
 
 for line in result_file:
     (name, score) = line.split(" ")
-    scores.append(float(score))
+    scores[score] = name
 
-scores.sort(reverse=True)
+for score, name in sorted(scores.items(), reverse=True):
+    print(name + ' has point of ' + str(score))
+
 result_file.close()
-
-print("The highest score is: ")
-print(scores[0])
-print("The second score is: ")
-print(scores[1])
-print("The third score is: ")
-print(scores[2])
