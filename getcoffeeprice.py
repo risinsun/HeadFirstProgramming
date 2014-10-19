@@ -2,6 +2,7 @@ __author__ = 'risinsun'
 
 import urllib
 
+
 def get_title():
     page = urllib.urlopen("http://www.google.com")
     text = page.read()#.decode("utf8")

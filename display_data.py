@@ -1,5 +1,6 @@
 __author__ = 'risinsun'
 
+
 def find_details(id2find):
     s = {}
     list_file = open("list.txt")
